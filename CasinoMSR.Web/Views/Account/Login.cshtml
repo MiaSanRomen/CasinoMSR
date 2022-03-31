@@ -1,0 +1,35 @@
+﻿@model HistoryPedia.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "Sign in";
+}
+<!-- login-area -->
+<section class="contact-area contact-bg" data-background="/img/bg/contact_bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7">
+                <div class="contact-form-wrap">
+                    <div class="widget-title mb-50">
+                        <h5 class="title">Sign in:</h5>
+                    </div>
+                    <div class="contact-form">
+                        <form method="post" asp-controller="Account" asp-action="Login"
+                              asp-route-returnUrl="@Model.ReturnUrl">
+                            <div class="validation sub-title" asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <span asp-validation-for="UserName" class="sub-title" />
+                                <input asp-for="UserName" type="text" placeholder="Login *" />
+                            </div>
+                            <div class="form-group">
+                                <span asp-validation-for="Password" class="sub-title" />
+                                <input asp-for="Password" type="password" placeholder="Password *" />
+                            </div>
+                            <input type="submit" value="Sign in" class="btn" />
+                        </form>
+                        <a class="btn" asp-controller="Account" asp-action="Register">Need account?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- login-area-end -->

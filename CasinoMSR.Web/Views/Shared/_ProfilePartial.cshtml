@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    
+    <li class="active menu-item-has-children">
+        <a asp-controller="Home" asp-action="Index">Hello @User.Identity.Name!</a>
+        <ul class="submenu">
+            <li><a asp-controller="Account" asp-action="Profile">Profile</a></li>
+            <li><a asp-controller="Favorite" asp-action="Index">Favorite games</a></li>
+            <li>
+                <form method="post" asp-controller="Account" asp-action="Logout">
+                    <input @*class="nav-link text-dark"*@ type="submit" value="Sign out"/>
+                </form>
+            </li>
+        </ul>
+    </li>
+} 

@@ -1,0 +1,60 @@
+﻿@model HistoryPedia.Models.User
+@{
+    ViewBag.Title = "Profile";
+}
+<main>
+    <!-- breadcrumb-area -->
+    <section class="breadcrumb-area breadcrumb-bg" data-background="/Images/People.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-content">
+                        <h2 class="title">Profile</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">@*@Model.*@UserName</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumb-area-end -->
+    <!-- contact-area -->
+    <section class="contact-area contact-bg" data-background="/img/bg/contact_bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <div class="contact-form-wrap">
+                        <div class="widget-title mb-50">
+                            <h5 class="title">Edit Username</h5>
+                        </div>
+                        <div class="contact-form">
+                            <form method="post" asp-controller="Account" asp-action="Login">
+                                    <input asp-for="UserName" type="text" placeholder="Username *" />
+                                    <input type="submit" value="Change" class="btn" />
+                                </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="widget-title mb-50">
+                        <h5 class="title">Avatar</h5>
+                    </div>
+                    <div class="movie-item movie-item-three mb-50">
+                        <div class="movie-poster">
+                            <img src="~/Images/Winner.jpeg" alt="">
+                            <ul class="overlay-btn">
+                                <li><a href="movie-details.html" class="btn">Change</a></li>
+                            </ul>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact-area-end -->
+</main>

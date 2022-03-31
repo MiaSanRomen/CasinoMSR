@@ -1,0 +1,8 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <li class="header-btn"><a asp-controller="Account" asp-action="Login" class="btn">Sign In</a></li>
+    <li class="header-btn"><a asp-controller="Account" asp-action="Register" class="btn">Sign Up</a></li>
+}

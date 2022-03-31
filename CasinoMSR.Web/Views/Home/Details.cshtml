@@ -1,0 +1,62 @@
+﻿@using System.Net
+@model HistoryPedia.Models.Game
+@{
+    ViewBag.Title = Model.Name;
+}
+
+
+<!-- main-area -->
+<main>
+
+    <!-- movie-details-area -->
+    <section class="movie-details-area" data-background="/img/bg/movie_details_bg.jpg">
+        <div class="container">
+            <div class="row align-items-center position-relative">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="movie-details-img">
+                        @if (string.IsNullOrEmpty(Model.Image.Path))
+                        {
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Image.Image))">
+                        }
+                        else
+                        {
+                            <img src="@Model.Image.Path">
+                        }
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-8">
+                    <div class="movie-details-content">
+                        <h5>New game</h5>
+                        <h2>@Model.Name <span>@Model.Genre</span></h2>
+                        <div class="banner-meta">
+                            <ul>
+                                <li class="quality">
+                                    <span>@Model.Recommendations recommend</span>
+                                    <span>@Model.Genre</span>
+                                </li>
+                                <li class="release-time">
+                                    <span><i class="far fa-calendar-alt"></i> @Model.Year</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p>
+                            @Model.Info
+                        </p>
+                        <div class="movie-details-prime">
+                            <ul>
+                                <li class="share"><a href="#"><i class="fas fa-share-alt"></i> Share</a></li>
+                                <li class="streaming">
+                                    <h6>Online Game</h6>
+                                    <span>Streaming Channels</span>
+                                </li>
+                                <li class="watch"><a class="btn popup-video"><i class="fas fa-play"></i> Play Now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- movie-details-area-end -->
+</main>
+<!-- main-area-end -->

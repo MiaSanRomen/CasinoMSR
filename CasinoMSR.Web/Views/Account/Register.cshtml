@@ -1,0 +1,42 @@
+﻿@model HistoryPedia.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "Registration";
+}
+<!-- register-area -->
+<section class="contact-area contact-bg" data-background="/img/bg/contact_bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-7">
+                <div class="contact-form-wrap">
+                    <div class="widget-title mb-50">
+                        <h5 class="title">Sign Up:</h5>
+                    </div>
+                    <div class="contact-form">
+                        <form method="post" asp-controller="Account" asp-action="Register">
+                            <div class="validation sub-title" asp-validation-summary="All"></div>
+                            <div class="form-group">
+                                <span asp-validation-for="UserName" class="sub-title" />
+                                <input asp-for="UserName" type="text" placeholder="Login *"/>
+                            </div>
+                            <div class="form-group">
+                                <span asp-validation-for="Email" class="sub-title" />
+                                <input asp-for="Email" type="text" placeholder="Email *"/>
+                            </div>
+                            <div class="form-group">
+                                <span asp-validation-for="Password" class="sub-title" />
+                                <input asp-for="Password" type="password" placeholder="Password *"/>
+                            </div>
+                            <div class="form-group">
+                                <span asp-validation-for="PasswordConfirm" class="sub-title" />
+                                <input asp-for="PasswordConfirm" type="password" placeholder="Password Confirm *"/>
+                            </div>
+                            <input type="submit" value="Sign Up" class="btn" />
+                        </form>
+                        <a class="btn" asp-controller="Account" asp-action="Login">Have account?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- register-area-end -->
