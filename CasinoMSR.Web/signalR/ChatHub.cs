@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 
-namespace HistoryPedia.signalR
+namespace CasinoMSR.Web.signalR
 {
     public class ChatHub : Hub
     {

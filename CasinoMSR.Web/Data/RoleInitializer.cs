@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using HistoryPedia.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace HistoryPedia.Data
+namespace CasinoMSR.Web.Data
 {
     public class RoleInitializer
     {
         public static async Task InitializeAsync(UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
         {
-            string adminEmail = "romanwt@mail.ru";
+            string adminEmail = "test@test.test";
             string adminName = "MiaSanRomen";
             string password = "Rr241000!";
             if (await roleManager.FindByNameAsync("admin") == null)
@@ -25,8 +25,7 @@ namespace HistoryPedia.Data
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
                 User admin = new User { Email = adminEmail, UserName = adminName, EmailConfirmed = true,
-                    ImageName = "Admin", TotalWon = 50000
-                };
+                    ImageName = "Admin", TotalWon = 50000};
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {

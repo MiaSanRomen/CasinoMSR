@@ -2,7 +2,7 @@
 using HistoryPedia.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace HistoryPedia.Models
+namespace CasinoMSR.Web.Models
 {
     public class User : IdentityUser
     {

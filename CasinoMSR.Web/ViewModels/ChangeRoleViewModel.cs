@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace HistoryPedia.ViewModels
+namespace CasinoMSR.Web.ViewModels
 {
     public class ChangeRoleViewModel
     {

@@ -2,7 +2,7 @@
 using MailKit.Net.Smtp;
 using System.Threading.Tasks;
 
-namespace HistoryPedia.Data
+namespace CasinoMSR.Web.Data
 {
     public interface IEmailService
     {

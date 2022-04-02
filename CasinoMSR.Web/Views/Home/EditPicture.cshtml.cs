@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace HistoryPedia.Views.Home
+namespace CasinoMSR.Web.Views.Home
 {
     public class EditPictureModel : PageModel
     {

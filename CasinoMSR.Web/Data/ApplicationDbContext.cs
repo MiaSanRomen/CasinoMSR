@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace HistoryPedia.Data
+namespace CasinoMSR.Web.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

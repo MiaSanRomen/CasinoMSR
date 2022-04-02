@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace HistoryPedia.logs
+namespace CasinoMSR.Web.logs
 {
     public static class FileLoggerExtensions
     {

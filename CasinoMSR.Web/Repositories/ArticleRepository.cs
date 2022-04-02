@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using HistoryPedia.Interfaces;
 using HistoryPedia.Models;
 
-namespace HistoryPedia.Repositories
+namespace CasinoMSR.Web.Repositories
 {
     public class GameRepository : IGetGame
     {

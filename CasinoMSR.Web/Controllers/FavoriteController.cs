@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using HistoryPedia.Data;
 using HistoryPedia.Interfaces;
 using HistoryPedia.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
-namespace HistoryPedia.Controllers
+namespace CasinoMSR.Web.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class FavoriteController : Controller
     {
         private GameContext db;
@@ -26,44 +24,49 @@ namespace HistoryPedia.Controllers
         public ActionResult Index()
         {
             User user = db.Users.ToList().FirstOrDefault(g => g.UserName == User.Identity.Name);
-            //user.FavoriteGames = _getFavorite.GetFavorite(user.Id);
-            
-            //if (user.FavoriteGames != null)
-            //{
-            //    foreach (var item in user.FavoriteGames)
-            //    {
-            //        item.Image = db.Pictures.FirstOrDefault(x => x.PictureName == item.ImageName);
-            //    }
-            //}
-            //db.SaveChanges();
+            user.FavoriteGames = _getFavorite.GetFavorite(user.UserName);
+            foreach (var item in user.FavoriteGames)
+            {
+                item.Game = db.Games.FirstOrDefault(x => x.Id == item.GameId);
+                item.Game.Image = db.Pictures.FirstOrDefault(x => x.PictureName == item.Game.ImageName);
+                item.Game.GenreValue = db.Genres.FirstOrDefault(x => x.GenreId == (int)item.Game.Genre);
+            }
+            db.SaveChanges();
+
             return View(user);
         }
 
 
-        //public async Task<IActionResult> AddToFavorite(int id)
-        //{
-        //    Game Game = db.Games.FirstOrDefault(g => g.Id == id);
-        //    User user = dbUsers.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
-        //    if (Game != null)
-        //    {
-        //        Game.UserId = user.Id;
-        //    }
-        //    await db.SaveChangesAsync();
-        //    return RedirectToAction("Index");
-        //}
+        public async Task<IActionResult> AddToFavorite(int id)
+        {
+            Game game = db.Games.FirstOrDefault(g => g.Id == id);
+            User user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+            user.FavoriteGames = _getFavorite.GetFavorite(user.UserName);
+            if (game != null)
+            {
+                game.Recommendations++;
+                FavoriteGame favoriteGame = new FavoriteGame { GameId = game.Id, UserName = user.UserName, Game = game};
+                db.FavoriteGames.Add(favoriteGame);
+                user.FavoriteGames.Add(favoriteGame);
+            }
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
 
-        //public async Task<IActionResult> RemoveFromFavorite(int id)
-        //{
-        //    Game Game = db.Games.FirstOrDefault(g => g.Id == id);
-        //    User user = dbUsers.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
-        //    user.FavoriteGames = db.Games.Where(x => x.UserId == user.Id).ToList();
-        //    if (Game != null)
-        //    {
-        //        user.FavoriteGames.Remove(Game);
-        //        Game.UserId = null;
-        //    }
-        //    await db.SaveChangesAsync();
-        //    return RedirectToAction("Index");
-        //}
+        public async Task<IActionResult> RemoveFromFavorite(int id)
+        {
+            User user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+            FavoriteGame favoriteGame = db.FavoriteGames.FirstOrDefault(fg => fg.GameId == id);
+            Game game = db.Games.FirstOrDefault(g => g.Id == id);
+            user.FavoriteGames = _getFavorite.GetFavorite(user.UserName);
+            if (favoriteGame != null)
+            {
+                game.Recommendations--;
+                user.FavoriteGames.Remove(favoriteGame);
+                db.Entry(favoriteGame).State = EntityState.Deleted;
+            }
+            await db.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }

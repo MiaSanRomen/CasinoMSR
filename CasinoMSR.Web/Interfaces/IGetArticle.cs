@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HistoryPedia.Models;
 
-namespace HistoryPedia.Interfaces
+namespace CasinoMSR.Web.Interfaces
 {
     public interface IGetGame
     {

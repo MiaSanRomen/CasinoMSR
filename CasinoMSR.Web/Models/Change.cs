@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HistoryPedia.Models;
 
-namespace HistoryPedia.Models
+namespace CasinoMSR.Web.Models
 {
     public class Change
     {

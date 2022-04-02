@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CasinoMSR.Web.Models;
 using HistoryPedia.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace HistoryPedia.Models
+namespace CasinoMSR.Web.Models
 {
     public class GameContext : IdentityDbContext<User>
     {
@@ -18,6 +19,7 @@ namespace HistoryPedia.Models
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<FavoriteGame> FavoriteGames { get; set; }
         public DbSet<GameUserStatistic> GameUserStatistics { get; set; }
+        public DbSet<GameSession> GameSessions { get; set; }
 
         public GameContext(DbContextOptions<GameContext> options)
             : base(options)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Diplom\\CasinoMSR\\HistoryPedia\\CasinoMSR.Web.csproj": {}
+    "D:\\Diplom.Git\\Casino\\CasinoMSR.Web\\CasinoMSR.Web.csproj": {}
   },
   "projects": {
-    "D:\\Diplom\\CasinoMSR\\HistoryPedia\\CasinoMSR.Web.csproj": {
+    "D:\\Diplom.Git\\Casino\\CasinoMSR.Web\\CasinoMSR.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Diplom\\CasinoMSR\\HistoryPedia\\CasinoMSR.Web.csproj",
+        "projectUniqueName": "D:\\Diplom.Git\\Casino\\CasinoMSR.Web\\CasinoMSR.Web.csproj",
         "projectName": "CasinoMSR.Web",
-        "projectPath": "D:\\Diplom\\CasinoMSR\\HistoryPedia\\CasinoMSR.Web.csproj",
+        "projectPath": "D:\\Diplom.Git\\Casino\\CasinoMSR.Web\\CasinoMSR.Web.csproj",
         "packagesPath": "C:\\Users\\Roman\\.nuget\\packages\\",
-        "outputPath": "D:\\Diplom\\CasinoMSR\\HistoryPedia\\obj\\",
+        "outputPath": "D:\\Diplom.Git\\Casino\\CasinoMSR.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -72,7 +72,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.5, )"
             },
             "NLog": {
               "target": "Package",

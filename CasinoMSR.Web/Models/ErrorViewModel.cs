@@ -1,6 +1,6 @@
 using System;
 
-namespace HistoryPedia.Models
+namespace CasinoMSR.Web.Models
 {
     public class ErrorViewModel
     {

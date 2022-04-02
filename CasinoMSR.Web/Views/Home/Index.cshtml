@@ -55,7 +55,7 @@
                         {
                             <div class="movie-item mb-50">
                                 <div class="movie-poster">
-                                    <a href="movie-details.html">
+                                    <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">
                                         @if (string.IsNullOrEmpty(item.Image.Path))
                                         {
                                             <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Image.Image))">
@@ -91,7 +91,7 @@
                         {
                             <div class="movie-item mb-50">
                                 <div class="movie-poster">
-                                    <a href="movie-details.html">
+                                    <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">
                                         @if (string.IsNullOrEmpty(item.Image.Path))
                                         {
                                             <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Image.Image))">
@@ -127,7 +127,7 @@
                     {
                         <div class="movie-item mb-50">
                             <div class="movie-poster">
-                                <a href="movie-details.html">
+                                <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id">
                                     @if (string.IsNullOrEmpty(item.Image.Path))
                                     {
                                         <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Image.Image))">

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace HistoryPedia.Models
+namespace CasinoMSR.Web.Models
 {
     public class Picture
     {

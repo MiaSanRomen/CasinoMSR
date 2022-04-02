@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HistoryPedia.Models;
 
-namespace HistoryPedia.Data
+namespace CasinoMSR.Web.Data
 {
     public static class DataClass
     {
@@ -22,9 +22,10 @@ namespace HistoryPedia.Data
                     new Game
                     {
                         Name = "Blackjack",
+                        View = "Blackjack",
                         Year = 2019,
                         TypeName = "Cards",
-                        Recommendations = 118,
+                        Recommendations = 0,
                         ImageName = "BlackJack",
                         Genre = GenreEnum.Cards,
                         Info = 
@@ -33,9 +34,10 @@ namespace HistoryPedia.Data
                     new Game
                     {
                         Name = "Caesar",
+                        View = "Caesar",
                         Year = 2018,
                         TypeName = "Slots",
-                        Recommendations = 162,
+                        Recommendations = 0,
                         ImageName = "Caesar",
                         Genre = GenreEnum.Slots,
                         Info =
@@ -44,9 +46,10 @@ namespace HistoryPedia.Data
                     new Game
                     {
                         Name = "Pirates' Gold",
+                        View = "Pirates",
                         Year = 2021,
                         TypeName = "Slots",
-                        Recommendations = 43,
+                        Recommendations = 0,
                         ImageName = "Pirates' Gold",
                         Genre = GenreEnum.Slots,
                         Info =
@@ -56,9 +59,10 @@ namespace HistoryPedia.Data
                     new Game
                     {
                         Name = "Secret of Egypt",
+                        View = "Egypt",
                         Year = 2022,
                         TypeName = "Slots",
-                        Recommendations = 29,
+                        Recommendations = 0,
                         ImageName = "Secret of Egypt",
                         Genre = GenreEnum.Slots,
                         Info =
@@ -67,9 +71,10 @@ namespace HistoryPedia.Data
                     new Game
                     {
                         Name = "Roulette",
+                        View = "Roulette",
                         Year = 2022,
                         TypeName = "Other",
-                        Recommendations = 74,
+                        Recommendations = 0,
                         ImageName = "Roulette",
                         Genre = GenreEnum.Other,
                         Info =

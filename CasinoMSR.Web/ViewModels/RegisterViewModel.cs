@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HistoryPedia.ViewModels
+namespace CasinoMSR.Web.ViewModels
 {
     public class RegisterViewModel
     {

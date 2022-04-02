@@ -1,4 +1,4 @@
-﻿@model List<HistoryPedia.Models.Game>
+﻿@model HistoryPedia.Models.SearchGame
 @{
     ViewBag.Title = "All Games";
 }
@@ -44,44 +44,55 @@
                     </div>
                 </div>
             </div>
-        <div class="row tr-movie-active">
-        @foreach (var item in Model)
-        {
-            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
-                <div class="movie-item movie-item-three mb-50">
-                    <div class="movie-poster">
-                        @if (string.IsNullOrEmpty(item.Image.Path))
-                        {
-                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Image.Image))">
-                        }
-                        else
-                        {
-                            <img src="@item.Image.Path">
-                        }
-                        <ul class="overlay-btn">
-                            <li><a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn">Play Now</a></li>
-                            <li><a href="movie-details.html" class="btn">Add to favorite</a></li>
-                        </ul>
-                    </div>
-                    <div class="movie-content">
-                        <div class="top">
-                            <h5 class="title"><a href="movie-details.html">@item.Name</a></h5>
-                            <span class="date">@item.Year</span>
-                        </div>
-                        <div class="bottom">
-                            <ul>
-                                <li><span class="quality">hd</span></li>
-                                <li>
-                                    <span class="duration"><i class="far fa-clock"></i>@item.Year</span>
-                                    <span class="rating"><i class="fas fa-thumbs-up"></i>@item.Recommendations</span>
-                                </li>
+            <div class="row tr-movie-active">
+                @foreach (var item in Model.Games)
+                {
+                    <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                        <div class="movie-item movie-item-three mb-50">
+                            <div class="movie-poster">
+                                @if (string.IsNullOrEmpty(item.Image.Path))
+                                {
+                                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Image.Image))">
+                                }
+                                else
+                                {
+                                    <img src="@item.Image.Path">
+                                }
+                            <ul class="overlay-btn">
+                                <li><a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn">Play Now</a></li>
+                                
+                                    @if (Model.CurrentUser != null)
+                                    {
+                                        @if (Model.CurrentUser.FavoriteGames.Any(fg => fg.GameId.Equals(item.Id)))
+                                         {
+                                             <li><a asp-controller="Favorite" asp-action="RemoveFromFavorite" asp-route-id="@item.Id" class="btn">Remove from favorite</a></li>
+                                         }
+                                         else
+                                         {
+                                             <li><a asp-controller="Favorite" asp-action="AddToFavorite" asp-route-id="@item.Id" class="btn">Add to favorite</a></li>
+                                         }
+                                    }
                             </ul>
+                            </div>
+                            <div class="movie-content">
+                                <div class="top">
+                                    <h5 class="title"><a href="movie-details.html">@item.Name</a></h5>
+                                    <span class="date">@item.Year</span>
+                                </div>
+                                <div class="bottom">
+                                    <ul>
+                                        <li><span class="quality">hd</span></li>
+                                        <li>
+                                            <span class="duration"><i class="far fa-clock"></i>@item.Year</span>
+                                            <span class="rating"><i class="fas fa-thumbs-up"></i>@item.Recommendations</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
-        }
-        </div>
             <div class="row">
                 <div class="col-12">
                     <div class="pagination-wrap mt-30">

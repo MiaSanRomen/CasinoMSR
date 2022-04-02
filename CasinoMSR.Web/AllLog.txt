@@ -1,3 +1,0 @@
-Application started. Press Ctrl+C to shut down.
-Hosting environment: Production
-Content root path: D:\Diplom\CasinoMSR\HistoryPedia

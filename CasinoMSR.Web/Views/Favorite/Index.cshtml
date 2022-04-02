@@ -14,7 +14,7 @@
                         <h2 class="title">Favorite <span>Games</span></h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">@*@Model.*@UserName</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">@Model.UserName</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Favorite Games</li>
                             </ol>
                         </nav>
@@ -41,281 +41,46 @@
                             <button class="" data-filter=".cat-one">Cards</button>
                             <button class="" data-filter=".cat-two">Other</button>
                         </div>
-                        <form action="#" class="movie-filter-form">
-                            <select class="custom-select">
-                                <option selected>English</option>
-                                <option value="1">Blueray</option>
-                                <option value="2">4k Movie</option>
-                                <option value="3">Hd Movie</option>
-                            </select>
-                        </form>
                     </div>
                 </div>
             </div>
             <div class="row tr-movie-active">
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a asp-action="Details" asp-controller="Home" asp-route-id="1" class="btn">Play Now</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">Women's Day</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
+                @foreach (var item in Model.FavoriteGames)
+                {
+                    <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                        <div class="movie-item movie-item-three mb-50">
+                            <div class="movie-poster">
+                                @if (string.IsNullOrEmpty(item.Game.Image.Path))
+                                {
+                                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(@item.Game.Image.Image))">
+                                }
+                                else
+                                {
+                                    <img src="@item.Game.Image.Path">
+                                }
+                                <ul class="overlay-btn">
+                                    <li><a asp-action="Details" asp-controller="Home" asp-route-id="@item.Game.Id" class="btn">Play Now</a></li>
+                                    <li><a asp-controller="Favorite" asp-action="RemoveFromFavorite" asp-route-id="@item.Game.Id" class="btn">Remove from favorite</a></li>
                                 </ul>
+                            </div>
+                            <div class="movie-content">
+                                <div class="top">
+                                    <h5 class="title"><a href="movie-details.html">@item.Game.Name</a></h5>
+                                    <span class="date">@item.Game.Year</span>
+                                </div>
+                                <div class="bottom">
+                                    <ul>
+                                        <li><span class="quality">hd</span></li>
+                                        <li>
+                                            <span class="duration"><i class="far fa-clock"></i>@item.Game.Year</span>
+                                            <span class="rating"><i class="fas fa-thumbs-up"></i>@item.Game.Recommendations</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Perfect Match</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">4k</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Dog Woof</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Easy Reach</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Cooking</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-two">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Hikaru Night</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Life Quotes</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-two">
-                    <div class="movie-item movie-item-three mb-50">
-                        <div class="movie-poster">
-                            <img src="~/Images/slot-test.png" alt="">
-                            <ul class="overlay-btn">
-                                <li class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </li>
-                                <li><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="popup-video btn">Watch Now</a></li>
-                                <li><a href="movie-details.html" class="btn">Details</a></li>
-                            </ul>
-                        </div>
-                        <div class="movie-content">
-                            <div class="top">
-                                <h5 class="title"><a href="movie-details.html">The Beachball</a></h5>
-                                <span class="date">2021</span>
-                            </div>
-                            <div class="bottom">
-                                <ul>
-                                    <li><span class="quality">hd</span></li>
-                                    <li>
-                                        <span class="duration"><i class="far fa-clock"></i> 128 min</span>
-                                        <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
             <div class="row">
                 <div class="col-12">

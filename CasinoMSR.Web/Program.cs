@@ -12,7 +12,7 @@ using HistoryPedia.Data;
 using Microsoft.AspNetCore.Identity;
 
 
-namespace HistoryPedia
+namespace CasinoMSR.Web
 {
     public class Program
     {

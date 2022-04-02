@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HistoryPedia.Controllers
+namespace CasinoMSR.Web.Controllers
 {
     [Authorize(Roles = "admin")]
     public class UsersController : Controller

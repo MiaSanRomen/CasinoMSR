@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace HistoryPedia.Data.Migrations
+namespace CasinoMSR.Web.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

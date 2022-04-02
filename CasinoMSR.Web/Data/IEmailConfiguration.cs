@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HistoryPedia.Data
+namespace CasinoMSR.Web.Data
 {
     public interface IEmailConfiguration
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using HistoryPedia.Interfaces;
 using HistoryPedia.Models;
 
-namespace HistoryPedia.Repositories
+namespace CasinoMSR.Web.Repositories
 {
     public class FavoriteRepository : IGetFavorite
     {
@@ -14,6 +14,6 @@ namespace HistoryPedia.Repositories
         {
             _GameContext = GameContext;
         }
-        public List<Game> GetFavorite(string id) => _GameContext.Games.ToList();/*.Where(x => x.UserId == id).ToList().ToList()*/
+        public List<FavoriteGame> GetFavorite(string username) => _GameContext.FavoriteGames.Where(x => x.UserName == username).ToList();
     }
 }
