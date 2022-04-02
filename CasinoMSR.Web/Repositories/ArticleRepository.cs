@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HistoryPedia.Interfaces;
-using HistoryPedia.Models;
+using CasinoMSR.Web.Interfaces;
+using CasinoMSR.Web.Models;
 
 namespace CasinoMSR.Web.Repositories
 {

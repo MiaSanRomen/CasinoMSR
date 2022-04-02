@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using HistoryPedia.Data;
+using CasinoMSR.Web.Data;
 using Microsoft.AspNetCore.Mvc;
-using HistoryPedia.ViewModels;
-using HistoryPedia.Models;
+using CasinoMSR.Web.ViewModels;
+using CasinoMSR.Web.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HistoryPedia.Models;
+using CasinoMSR.Web.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace CasinoMSR.Web.Data

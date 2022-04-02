@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using HistoryPedia.Models;
+using CasinoMSR.Web.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace CasinoMSR.Web.Models
