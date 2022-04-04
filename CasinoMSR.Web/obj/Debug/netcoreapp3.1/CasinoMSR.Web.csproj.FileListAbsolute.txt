@@ -354,9 +354,7 @@ D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\R
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Favorite\AddToFavorite.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Favorite\Index.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
-D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Delete.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
-D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\EditPicture.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Games.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -378,3 +376,4 @@ D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.dll
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.pdb
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.genruntimeconfig.cache
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Game\Roulette.cshtml.g.cs
+D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutGame.cshtml.g.cs

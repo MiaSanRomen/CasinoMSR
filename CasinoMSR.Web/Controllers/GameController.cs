@@ -71,7 +71,7 @@ namespace CasinoMSR.Web.Controllers
                 {
                     Game game = _getGame.GetObjectGame(gameSession.GameId);
                     if (game != null)
-                        return View(game.View);
+                        return View(game.View, user);
                 }
             return NotFound();
         }

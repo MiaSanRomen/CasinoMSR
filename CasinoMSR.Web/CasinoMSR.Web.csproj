@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-HistoryPedia-9FCD4FB3-3534-4A82-A2D8-45D47F5945DB</UserSecretsId>
+    <UserSecretsId>aspnet-CasinoMSR.Web-9FCD4FB3-3534-4A82-A2D8-45D47F5945DB</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

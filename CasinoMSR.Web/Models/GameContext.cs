@@ -14,8 +14,6 @@ namespace CasinoMSR.Web.Models
         public DbSet<Game> Games { get; set; }
         public DbSet<Change> Changes { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<Link> Links { get; set; }
-        public DbSet<BlockInfo> BlocksInfo { get; set; }
         public DbSet<Picture> Pictures { get; set; }
         public DbSet<FavoriteGame> FavoriteGames { get; set; }
         public DbSet<GameUserStatistic> GameUserStatistics { get; set; }

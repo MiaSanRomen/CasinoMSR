@@ -26,7 +26,7 @@ namespace CasinoMSR.Web.Data
         {
             var emailMessage = new MimeMessage();
 
-            emailMessage.From.Add(new MailboxAddress("HistoryPedia", _emailConfiguration.SmtpUsername));
+            emailMessage.From.Add(new MailboxAddress("CasinoMSR.Web", _emailConfiguration.SmtpUsername));
             emailMessage.To.Add(new MailboxAddress(login, email));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Html)

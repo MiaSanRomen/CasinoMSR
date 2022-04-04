@@ -25,7 +25,7 @@ namespace CasinoMSR.Web.Data
             if (await userManager.FindByNameAsync(adminEmail) == null)
             {
                 User admin = new User { Email = adminEmail, UserName = adminName, EmailConfirmed = true,
-                    ImageName = "Admin", TotalWon = 50000};
+                    ImageName = "Admin", TotalMoney = 150, TotalWon = 0};
                 IdentityResult result = await userManager.CreateAsync(admin, password);
                 if (result.Succeeded)
                 {

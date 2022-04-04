@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CasinoMSR.Web.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : BaseViewModel
     {
         [Required(ErrorMessage = "Login required")]
         [Display(Name = "Login")]

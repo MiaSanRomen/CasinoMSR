@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-HistoryPedia-9FCD4FB3-3534-4A82-A2D8-45D47F5945DB")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-CasinoMSR.Web-9FCD4FB3-3534-4A82-A2D8-45D47F5945DB")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasinoMSR.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

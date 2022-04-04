@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "D:\Diplom.Git\Casino\CasinoMSR.Web\Views\_ViewImports.cshtml"
-using HistoryPedia;
+using CasinoMSR.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "D:\Diplom.Git\Casino\CasinoMSR.Web\Views\_ViewImports.cshtml"
-using HistoryPedia.Models;
+using CasinoMSR.Web.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c75f1945c141de4f0670d1a90025721e81fd5d54", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"189b50c7a368be6f53bf900ffe82ab04bae00021", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

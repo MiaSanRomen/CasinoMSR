@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace CasinoMSR.Web.ViewModels
 {
-    public class PictureViewModel
+    public class PictureViewModel : BaseViewModel
     {
         public string PicturePrevName { get; set; }
         public string PictureName { get; set; }

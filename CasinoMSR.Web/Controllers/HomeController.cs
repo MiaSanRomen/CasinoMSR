@@ -40,7 +40,8 @@ namespace CasinoMSR.Web.Controllers
 
         public IActionResult Contacts()
         {
-            return View();
+            var user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+            return View(new BaseViewModel{CurrentUser = user});
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -59,7 +60,8 @@ namespace CasinoMSR.Web.Controllers
                     game.GenreValue = db.Genres.FirstOrDefault(x => x.GenreId == (int)game.Genre);
                     var pictures = db.Pictures;
                     game.Image = pictures.FirstOrDefault(x => x.PictureName == game.ImageName);
-                    return View(game);
+                    var user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+                    return View(new GameViewModel{CurrentUser = user, CurrentGame = game});
                 }
             }
 
@@ -79,7 +81,8 @@ namespace CasinoMSR.Web.Controllers
             {
                 item.Image = db.Pictures.FirstOrDefault(x => x.PictureName == item.ImageName);
             }
-            SearchGame dataGamesUsers = new SearchGame { Games = games, Users = users};
+            var user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+            UsersGamesViewModel dataGamesUsers = new UsersGamesViewModel { Games = games, Users = users, CurrentUser = user };
             db.SaveChanges();
             return View(dataGamesUsers);
         }
@@ -88,14 +91,15 @@ namespace CasinoMSR.Web.Controllers
         {
             var games = string.IsNullOrEmpty(name) ? _getGame.GetAllGames : db.Games.Where(p => p.Name.Contains(name)).ToList();
             var user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
-            user.FavoriteGames = _getFavorite.GetFavorite(user.UserName);
+            if(user != null)
+                user.FavoriteGames = _getFavorite.GetFavorite(user.UserName);
             foreach (var item in games)
             {
                 item.Image = db.Pictures.FirstOrDefault(x => x.PictureName == item.ImageName);
                 item.GenreValue = db.Genres.FirstOrDefault(x => x.GenreId == (int)item.Genre);
             }
             db.SaveChanges();
-            SearchGame dataGamesUsers = new SearchGame { Games = games, CurrentUser = user };
+            UsersGamesViewModel dataGamesUsers = new UsersGamesViewModel { Games = games, CurrentUser = user };
             return View(dataGamesUsers);
         }
     }

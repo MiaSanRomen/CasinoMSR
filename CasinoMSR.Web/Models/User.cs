@@ -6,8 +6,8 @@ namespace CasinoMSR.Web.Models
 {
     public class User : IdentityUser
     {
-        public decimal TotalMoney { get; set; }
-        public decimal TotalWon { get; set; }
+        public int TotalMoney { get; set; }
+        public int TotalWon { get; set; }
         public Picture Image { get; set; }
         public string ImageName { get; set; }
         public List<GameUserStatistic> Statistics { get; set; }

@@ -1,7 +1,7 @@
 ﻿@using System.Net
-@model HistoryPedia.Models.Game
+@model CasinoMSR.Web.ViewModels.GameViewModel
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.CurrentGame.Name;
 }
 
 
@@ -14,33 +14,33 @@
             <div class="row align-items-center position-relative">
                 <div class="col-xl-3 col-lg-4">
                     <div class="movie-details-img">
-                        @if (string.IsNullOrEmpty(Model.Image.Path))
+                        @if (string.IsNullOrEmpty(Model.CurrentGame.Image.Path))
                         {
-                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Image.Image))">
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.CurrentGame.Image.Image))">
                         }
                         else
                         {
-                            <img src="@Model.Image.Path">
+                            <img src="@Model.CurrentGame.Image.Path">
                         }
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-8">
                     <div class="movie-details-content">
                         <h5>New game</h5>
-                        <h2>@Model.Name <span>@Model.Genre</span></h2>
+                        <h2>@Model.CurrentGame.Name <span>@Model.CurrentGame.Genre</span></h2>
                         <div class="banner-meta">
                             <ul>
                                 <li class="quality">
-                                    <span>@Model.Recommendations recommend</span>
-                                    <span>@Model.Genre</span>
+                                    <span>@Model.CurrentGame.Recommendations recommend</span>
+                                    <span>@Model.CurrentGame.Genre</span>
                                 </li>
                                 <li class="release-time">
-                                    <span><i class="far fa-calendar-alt"></i> @Model.Year</span>
+                                    <span><i class="far fa-calendar-alt"></i> @Model.CurrentGame.Year</span>
                                 </li>
                             </ul>
                         </div>
                         <p>
-                            @Model.Info
+                            @Model.CurrentGame.Info
                         </p>
                         <div class="movie-details-prime">
                             <ul>
@@ -49,7 +49,7 @@
                                     <h6>Online Game</h6>
                                     <span>Streaming Channels</span>
                                 </li>
-                                <li class="watch"><a class="btn" asp-controller="Game" asp-action="CreateGame" asp-route-id="@Model.Id"><i class="fas fa-play"></i> Play Now</a></li>
+                                <li class="watch"><a class="btn" asp-controller="Game" asp-action="CreateGame" asp-route-id="@Model.CurrentGame.Id"><i class="fas fa-play"></i> Play Now</a></li>
                             </ul>
                         </div>
                     </div>
