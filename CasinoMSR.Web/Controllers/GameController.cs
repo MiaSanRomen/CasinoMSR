@@ -26,11 +26,11 @@ namespace CasinoMSR.Web.Controllers
     public class GameController : Controller
     {
 
-        private GameContext db;
+        public static GameContext db;
         private readonly ILogger<GameController> _logger;
         private readonly IGetGame _getGame;
 
-        public GameController(ILogger<GameController> logger, GameContext contextApp, IHubContext<ChatHub> hubContext, IGetGame getGame)
+        public GameController(ILogger<GameController> logger, GameContext contextApp, IGetGame getGame)
         {
             db = contextApp;
             _logger = logger;
@@ -71,7 +71,7 @@ namespace CasinoMSR.Web.Controllers
                 {
                     Game game = _getGame.GetObjectGame(gameSession.GameId);
                     if (game != null)
-                        return View(game.View, user);
+                        return View(game.View, new PlayGameViewModel{CurrentUser = user, CurrentBid = 0});
                 }
             return NotFound();
         }

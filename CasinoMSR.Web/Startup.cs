@@ -92,7 +92,7 @@ namespace CasinoMSR.Web
             app.UseEndpoints(endpoints =>               //отправляет ответ, если запрос пришел по маршруту
             {
                 //Метод Map применяется для сопоставления пути запроса с определенным делегатом, который будет обрабатывать запрос по этому пути
-                endpoints.MapHub<ChatHub>("/chat");
+                endpoints.MapHub<GameOnlineHub>("/gameonline");
                 //endpoints.MapControllerRoute(
                 //    name: "default",
                 //    pattern: "{controller=Home}/{action=Index}/{id?}");

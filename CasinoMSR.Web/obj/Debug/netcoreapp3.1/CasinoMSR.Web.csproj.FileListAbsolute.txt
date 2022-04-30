@@ -333,7 +333,6 @@ D:\Diplom.Git\Casino\CasinoMSR.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 D:\Diplom.Git\Casino\CasinoMSR.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Diplom.Git\Casino\CasinoMSR.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Diplom.Git\Casino\CasinoMSR.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.csproj.AssemblyReference.cache
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.GeneratedMSBuildEditorConfig.editorconfig
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.AssemblyInfoInputs.cache
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.AssemblyInfo.cs
@@ -377,3 +376,4 @@ D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.pdb
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.genruntimeconfig.cache
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Game\Roulette.cshtml.g.cs
 D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutGame.cshtml.g.cs
+D:\Diplom.Git\Casino\CasinoMSR.Web\obj\Debug\netcoreapp3.1\CasinoMSR.Web.csproj.AssemblyReference.cache

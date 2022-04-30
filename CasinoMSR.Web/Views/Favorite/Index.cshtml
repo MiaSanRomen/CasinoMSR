@@ -1,4 +1,4 @@
-﻿@model CasinoMSR.Web.Models.User
+﻿@model CasinoMSR.Web.ViewModels.BaseViewModel
 @{
     ViewBag.Title = "Favorite Games";
 }
@@ -14,7 +14,7 @@
                         <h2 class="title">Favorite <span>Games</span></h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">@Model.UserName</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">@Model.CurrentUser.UserName</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Favorite Games</li>
                             </ol>
                         </nav>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div class="row tr-movie-active">
-                @foreach (var item in Model.FavoriteGames)
+                @foreach (var item in Model.CurrentUser.FavoriteGames)
                 {
                     <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
                         <div class="movie-item movie-item-three mb-50">

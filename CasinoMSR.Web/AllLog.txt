@@ -1,0 +1,239 @@
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An exception occurred while iterating over the results of a query for context type 'CasinoMSR.Web.Models.GameContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.Int32'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An exception occurred while iterating over the results of a query for context type 'CasinoMSR.Web.Models.GameContext'.
+System.InvalidCastException: Unable to cast object of type 'System.Decimal' to type 'System.Int32'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Int32()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetInt32(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Invalid password for user 645b2d72-6a93-488a-8cbd-475b0c679c8c.
+User 645b2d72-6a93-488a-8cbd-475b0c679c8c failed to provide the correct password.
+Invalid password for user 645b2d72-6a93-488a-8cbd-475b0c679c8c.
+User 645b2d72-6a93-488a-8cbd-475b0c679c8c failed to provide the correct password.
+Invalid password for user 645b2d72-6a93-488a-8cbd-475b0c679c8c.
+User 645b2d72-6a93-488a-8cbd-475b0c679c8c failed to provide the correct password.
+The view 'Blackjack' was not found. Searched locations: /Views/Game/Blackjack.cshtml, /Views/Shared/Blackjack.cshtml, /Pages/Shared/Blackjack.cshtml
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18302628895834243085", Request ID "8000000e-0002-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+The view 'Blackjack' was not found. Searched locations: /Views/Game/Blackjack.cshtml, /Views/Shared/Blackjack.cshtml, /Pages/Shared/Blackjack.cshtml
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18302628895834243087", Request ID "80000010-0002-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686489872171078", Request ID "80000047-0002-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18374686489872171083", Request ID "8000004c-0002-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "17654110540902957071", Request ID "80000010-0000-f500-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "16789419416742789172", Request ID "80000035-0001-e900-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Invalid password for user 4e858bba-d5e5-415c-9040-bae240beef60.
+User 4e858bba-d5e5-415c-9040-bae240beef60 failed to provide the correct password.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Failed to invoke hub method 'GetSpinValue'.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Failed to invoke hub method 'GetSpinValue'.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Failed to invoke hub method 'GetSpinValue'.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18086456118015426593", Request ID "80000022-0003-fb00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+An unhandled exception has occurred while executing the request.
+An exception was thrown attempting to execute the error handler.
+Connection ID "18302628891539276001", Request ID "800000e2-0001-fe00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+Application started. Press Ctrl+C to shut down.
+Hosting environment: Production
+Content root path: D:\Diplom.Git\Casino\CasinoMSR.Web

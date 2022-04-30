@@ -1,4 +1,4 @@
-﻿@model CasinoMSR.Web.Models.User
+﻿@model CasinoMSR.Web.ViewModels.BaseViewModel
 @{
     ViewBag.Title = "Profile";
 }
@@ -33,7 +33,7 @@
                         </div>
                         <div class="contact-form">
                             <form method="post" asp-controller="Account" asp-action="Login">
-                                    <input asp-for="UserName" type="text" placeholder="Username *" />
+                                    <input asp-for="CurrentUser.UserName" type="text" placeholder="Username *" />
                                     <input type="submit" value="Change" class="btn" />
                                 </form>
                         </div>

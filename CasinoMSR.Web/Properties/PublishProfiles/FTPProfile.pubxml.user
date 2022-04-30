@@ -8,14 +8,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfnIKDDml4UKLTFJFtjpbHwAAAAACAAAAAAAQZgAAAAEAACAAAABfM1xdZDCxwz/YGKzq7qahdfrQmquQNNBsnqQmr5olsAAAAAAOgAAAAAIAACAAAAA18Pi8gSsDOfBTNei0rt6i+m/4cfKYzEty1y4PnSlbSSAAAACN9rtY+WnAema8FYGpJwVIygZ3jecVVC3ssK4Q1Y7wLEAAAAB7CUcBWhpo+EVjD3LxyAKiwnPjVC/UBtS4aWF0gTV0AadIi80Pv0cFql7YXxfdLO0WrW7eqV7FvpgOnoPJkJWT</EncryptedPassword>
     <_PublishTargetUrl>ftp://win5248.site4now.net/casinomsr</_PublishTargetUrl>
-    <History>False|2022-04-04T10:10:59.1424505Z;True|2022-04-04T12:59:43.5763435+03:00;</History>
+    <History>True|2022-04-04T19:53:00.6884066Z;False|2022-04-04T13:10:59.1424505+03:00;True|2022-04-04T12:59:43.5763435+03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
       <publishTime>04/01/2022 16:29:21</publishTime>
     </File>
     <File Include="appsettings.json">
-      <publishTime>04/04/2022 13:06:52</publishTime>
+      <publishTime>04/04/2022 22:50:42</publishTime>
     </File>
     <File Include="appsettings.Production.json">
       <publishTime>04/01/2022 16:29:21</publishTime>
@@ -24,13 +24,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/05/2020 16:01:00</publishTime>
     </File>
     <File Include="CasinoMSR.Web.deps.json">
-      <publishTime>04/04/2022 13:09:18</publishTime>
+      <publishTime>04/04/2022 22:51:19</publishTime>
     </File>
     <File Include="CasinoMSR.Web.dll">
       <publishTime>04/04/2022 12:37:08</publishTime>
     </File>
     <File Include="CasinoMSR.Web.exe">
-      <publishTime>04/04/2022 13:09:15</publishTime>
+      <publishTime>04/04/2022 22:51:08</publishTime>
     </File>
     <File Include="CasinoMSR.Web.pdb">
       <publishTime>04/04/2022 12:37:08</publishTime>
@@ -42,7 +42,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/04/2022 12:37:12</publishTime>
     </File>
     <File Include="CasinoMSR.Web.Views.pdb">
-      <publishTime>04/04/2022 13:09:17</publishTime>
+      <publishTime>04/04/2022 22:51:12</publishTime>
     </File>
     <File Include="cs/Microsoft.CodeAnalysis.CSharp.resources.dll">
       <publishTime>09/12/2019 17:08:58</publishTime>
@@ -411,7 +411,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/12/2019 17:08:36</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>04/04/2022 13:09:19</publishTime>
+      <publishTime>04/04/2022 22:51:20</publishTime>
     </File>
     <File Include="wwwroot/css/animate.min.css">
       <publishTime>04/01/2022 16:29:24</publishTime>
@@ -939,7 +939,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/01/2022 16:29:24</publishTime>
     </File>
     <File Include="wwwroot/js/roulette.js">
-      <publishTime>04/03/2022 22:58:36</publishTime>
+      <publishTime>04/04/2022 16:09:21</publishTime>
     </File>
     <File Include="wwwroot/js/signalr/dist/browser/signalr.min.js">
       <publishTime>04/01/2022 16:29:24</publishTime>

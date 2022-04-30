@@ -68,7 +68,7 @@ namespace CasinoMSR.Web.Controllers
             return NotFound();
         }
 
-        public ActionResult Index(string name)
+        public ActionResult Index()
         {
             var games = _getGame.GetAllGames;
             foreach (var item in games)
@@ -101,6 +101,15 @@ namespace CasinoMSR.Web.Controllers
             db.SaveChanges();
             UsersGamesViewModel dataGamesUsers = new UsersGamesViewModel { Games = games, CurrentUser = user };
             return View(dataGamesUsers);
+        }
+
+        public ActionResult PutMoney()
+        {
+            var user = db.Users.FirstOrDefault(g => g.UserName == User.Identity.Name);
+            if (user != null)
+                user.TotalMoney = user.TotalMoney + 200;
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

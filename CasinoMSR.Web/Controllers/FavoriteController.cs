@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using CasinoMSR.Web.Interfaces;
 using CasinoMSR.Web.Models;
+using CasinoMSR.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,7 @@ namespace CasinoMSR.Web.Controllers
             }
             db.SaveChanges();
 
-            return View(user);
+            return View(new BaseViewModel { CurrentUser = user });
         }
 
 

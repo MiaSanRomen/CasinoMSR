@@ -1,4 +1,4 @@
-let bankValue = 1000;
+let bankValue = 0;
 let currentBet = 0;
 let wager = 5;
 let lastWager = 0;
@@ -18,19 +18,30 @@ startGame();
 let wheel = document.getElementsByClassName('wheel')[0];
 let ballTrack = document.getElementsByClassName('ballTrack')[0];
 
-function resetGame() {
-	bankValue = 1000;
-	currentBet = 0;
-	wager = 5;
-	bet = [];
-	numbersBet = [];
-	previousNumbers = [];
-	document.getElementById('betting_board').remove();
-	document.getElementById('notification').remove();
-	buildBettingBoard();
-}
+
+
+//function resetGame() {
+//	bankValue = 1000;
+//	currentBet = 0;
+//	wager = 5;
+//	bet = [];
+//	numbersBet = [];
+//	previousNumbers = [];
+//	document.getElementById('betting_board').remove();
+//	document.getElementById('notification').remove();
+//	buildBettingBoard();
+//}
 
 function startGame() {
+    var callback = function (mutationsList, observer) {
+        let returnedVal = document.getElementById("returnedVal").innerText;
+        console.log("SET 0-38 - ", returnedVal);
+        spin(returnedVal);
+	};
+    var targetNode = document.getElementById('returnedVal');
+    var config = { childList: true };
+    var observer = new MutationObserver(callback);
+    observer.observe(targetNode, config);
 	buildWheel();
 	buildBettingBoard();
 }
@@ -40,14 +51,14 @@ function gameOver() {
 	notification.setAttribute('id', 'notification');
 	let nSpan = document.createElement('span');
 	nSpan.setAttribute('class', 'nSpan');
-	nSpan.innerText = 'Bankrupt';
+	nSpan.innerText = 'Out of money :(';
 	notification.append(nSpan);
 
 	let nBtn = document.createElement('div');
 	nBtn.setAttribute('class', 'nBtn');
-	nBtn.innerText = 'Play again';
+	nBtn.innerText = 'Go to Home page';
 	nBtn.onclick = function () {
-		resetGame();
+		window.location.href = 'http://miasanromen-001-site1.btempurl.com/';
 	};
 	notification.append(nBtn);
 	container.prepend(notification);
@@ -430,11 +441,6 @@ function setBet(e, n, t, o) {
 	lastWager = wager;
 	wager = (bankValue < wager) ? bankValue : wager;
 	if (wager > 0) {
-		let spinBtn = document.getElementsByClassName('spinBtn')[0];
-		spinBtn.onclick = function () {
-			this.remove();
-			spin();
-		};
 		bankValue = bankValue - wager;
 		currentBet = currentBet + wager;
 		document.getElementById('bankSpan').innerText = '' + bankValue.toLocaleString("en-GB") + '';
@@ -478,29 +484,28 @@ function setBet(e, n, t, o) {
 	}
 }
 
-function spin() {
-	var winningSpin = Math.floor(Math.random() * 36);
-	spinWheel(winningSpin);
+function spin(winningSpin) {
+	spinWheel(parseInt(winningSpin, 10));
 	setTimeout(function () {
-		if (numbersBet.includes(winningSpin)) {
+		if (numbersBet.includes(parseInt(winningSpin, 10))) {
 			let winValue = 0;
 			let betTotal = 0;
 			for (i = 0; i < bet.length; i++) {
 				var numArray = bet[i].numbers.split(',').map(Number);
-				if (numArray.includes(winningSpin)) {
+				if (numArray.includes(parseInt(winningSpin, 10))) {
 					bankValue = (bankValue + (bet[i].odds * bet[i].amt) + bet[i].amt);
 					winValue = winValue + (bet[i].odds * bet[i].amt);
 					betTotal = betTotal + bet[i].amt;
 				}
 			}
-			win(winningSpin, winValue, betTotal);
+			win(parseInt(winningSpin, 10), winValue, betTotal);
 		}
 
 		currentBet = 0;
 		document.getElementById('bankSpan').innerText = '' + bankValue.toLocaleString("en-GB") + '';
 		document.getElementById('betSpan').innerText = '' + currentBet.toLocaleString("en-GB") + '';
 
-		let pnClass = (numRed.includes(winningSpin)) ? 'pnRed' : ((winningSpin == 0) ? 'pnGreen' : 'pnBlack');
+		let pnClass = (numRed.includes(parseInt(winningSpin))) ? 'pnRed' : ((parseInt(winningSpin) == 0) ? 'pnGreen' : 'pnBlack');
 		let pnContent = document.getElementById('pnContent');
 		let pnSpan = document.createElement('span');
 		pnSpan.setAttribute('class', pnClass);
@@ -519,14 +524,14 @@ function spin() {
 }
 
 function win(winningSpin, winValue, betTotal) {
-	if (winValue > 0) {
+	if (parseInt(winValue) > 0) {
 		let notification = document.createElement('div');
 		notification.setAttribute('id', 'notification');
 		let nSpan = document.createElement('div');
 		nSpan.setAttribute('class', 'nSpan');
 		let nsnumber = document.createElement('span');
 		nsnumber.setAttribute('class', 'nsnumber');
-		nsnumber.style.cssText = (numRed.includes(winningSpin)) ? 'color:red' : 'color:black';
+		nsnumber.style.cssText = (numRed.includes(parseInt(winningSpin))) ? 'color:red' : 'color:black';
 		nsnumber.innerText = winningSpin;
 		nSpan.append(nsnumber);
 		let nsTxt = document.createElement('span');
@@ -546,9 +551,13 @@ function win(winningSpin, winValue, betTotal) {
 		nsWin.append(nsWinBlock);
 		nsWinBlock = document.createElement('div');
 		nsWinBlock.setAttribute('class', 'nsWinBlock');
-		nsWinBlock.innerText = 'Payout: ' + (winValue + betTotal);
+		console.log('betTotal: ', betTotal);
+		console.log('winValue: ', winValue);
+        console.log('Payout: ', (winValue + betTotal));
+        nsWinBlock.innerText = 'Payout: ' + (winValue + betTotal);
 		nsWin.append(nsWinBlock);
 		nSpan.append(nsWin);
+		document.getElementById('wonVal').innerText = (winValue + betTotal);
 		notification.append(nSpan);
 		container.prepend(notification);
 		setTimeout(function () {
@@ -581,10 +590,6 @@ function removeBet(e, n, t, o) {
 				}
 			}
 		}
-	}
-
-	if (currentBet == 0 && container.querySelector('.spinBtn')) {
-		document.getElementsByClassName('spinBtn')[0].remove();
 	}
 }
 
@@ -625,3 +630,4 @@ function removeChips() {
 		removeChips();
 	}
 }
+

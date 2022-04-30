@@ -135,7 +135,7 @@ namespace CustomIdentityApp.Controllers
         public ActionResult Profile()
         {
             User user = db.Users.ToList().FirstOrDefault(g => g.UserName == User.Identity.Name);
-            return View(user);
+            return View(new BaseViewModel{ CurrentUser = user});
         }
     }
 }

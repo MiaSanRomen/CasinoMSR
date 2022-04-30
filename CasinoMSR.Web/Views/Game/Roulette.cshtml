@@ -1,51 +1,74 @@
-﻿@model CasinoMSR.Web.Models.User
+﻿@model CasinoMSR.Web.ViewModels.PlayGameViewModel
 @{
     Layout = "_LayoutGame";
     ViewBag.Title = "Roulette";
 }
-<div id="container">
-    <div class="wheel"></div>
-    <div id="betting_board">
-        <div class="winning_lines"></div>
-        <div class="bbtop"></div>
-        <div class="number_board"></div>
-        <div class="bo3_board"></div>
-        <div class="oto_board"></div>
-        <div class="chipDeck"></div>
-        <div class="bankContainer">
-            <div class="bank">
-                <span id="bankSpan">@Model.TotalMoney</span>
+    <div id="container">
+        <div class="wheel"></div>
+        <div id="betting_board">
+            <div class="winning_lines"></div>
+            <div class="bbtop"></div>
+            <div class="number_board"></div>
+            <div class="bo3_board"></div>
+            <div class="oto_board"></div>
+            <div class="chipDeck">
             </div>
-            <div class="bet">
-                <span id="betSpan">0</span>
+            <div class="bankContainer">
+                <div class="bank">
+                    <span id="bankSpan">@Model.CurrentUser.TotalMoney</span>
+                </div>
+                <div class="bet">
+                    <span id="betSpan">0</span>
+                </div>
             </div>
         </div>
     </div>
-    <div class="spinBtn">spin</div>
-</div>
+        <p id="returnedVal" hidden>0</p>
+        <p id="wonVal" hidden>0</p>
+<button id="setBetAndSpin" onclick="spin_click()">SPIN!</button>
 <script src="~/js/roulette.js"></script>
+<script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    function loadPage() {
+        console.log("b", bankValue);
+        bankValue = parseInt("@Model.CurrentUser.TotalMoney");
+        console.log("a", bankValue);
+    }
 
-@*<section class="contact-area contact-bg" data-background="/img/bg/contact_bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-8 col-lg-7">
-                    <div class="contact-form-wrap">
-                        <div class="widget-title mb-50">
-                            <h5 class="title">Total money</h5>
-                        </div>
-                        <div class="contact-form">
-                            <input disabled="disabled" type="text" placeholder="0" />
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="widget-title mb-50">
-                        <h5 class="title"></h5>
-                    </div>
-                    <div class="movie-item movie-item-three mb-50">
-                        <a class="btn"><i class="fas fa-play"></i>Spin!</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>*@
+    const hubConnection = new signalR.HubConnectionBuilder()
+        .withUrl("/gameonline")
+        .build();
+
+    function spin_click(){
+        let bid = document.getElementById("betSpan").innerText;
+        console.log("SET BID - ", bid);
+        let username = "@Model.CurrentUser.UserName";
+        hubConnection.invoke("GetSpinValue", bid, username);
+    }
+
+    hubConnection.on("Spin",
+        function (value, money) {
+            console.log("GET 0-38 - ", value);
+            console.log("Spin started, money: ", money);
+            document.getElementById("returnedVal").innerText = value;
+        });
+
+    var callbackWon = function (mutationsList, observer) {
+        let wonVal = document.getElementById("wonVal").innerText;
+        let bid = document.getElementById("betSpan").innerText;
+        console.log("SET WON - ", wonVal);
+        let username = "@Model.CurrentUser.UserName";
+        hubConnection.invoke("WonMoney", wonVal, bid, username);
+    };
+    var targetNode = document.getElementById('wonVal');
+    var config = { childList: true };
+    var observer = new MutationObserver(callbackWon);
+    observer.observe(targetNode, config);
+
+    hubConnection.on("Win",
+        function (money) {
+            console.log("Spin finished, money: ", money);
+        });
+
+    hubConnection.start();
+</script>
